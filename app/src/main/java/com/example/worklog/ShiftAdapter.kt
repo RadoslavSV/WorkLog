@@ -51,21 +51,22 @@ class ShiftAdapter(
         val dayOfWeek = when (
             calendar.get(java.util.Calendar.DAY_OF_WEEK)
         ) {
-            java.util.Calendar.MONDAY -> "mon"
-            java.util.Calendar.TUESDAY -> "tue"
-            java.util.Calendar.WEDNESDAY -> "wed"
-            java.util.Calendar.THURSDAY -> "thu"
-            java.util.Calendar.FRIDAY -> "fri"
-            java.util.Calendar.SATURDAY -> "sat"
-            java.util.Calendar.SUNDAY -> "sun"
+            java.util.Calendar.MONDAY -> "MON"
+            java.util.Calendar.TUESDAY -> "TUE"
+            java.util.Calendar.WEDNESDAY -> "WED"
+            java.util.Calendar.THURSDAY -> "THU"
+            java.util.Calendar.FRIDAY -> "FRI"
+            java.util.Calendar.SATURDAY -> "SAT"
+            java.util.Calendar.SUNDAY -> "SUN"
             else -> ""
         }
 
         holder.binding.tvDate.text =
             String.format(
                 java.util.Locale.getDefault(),
-                "%02d%n(%s)",
+                "%02d.%02d%n%s",
                 item.date,
+                month + 1,
                 dayOfWeek
             )
 
