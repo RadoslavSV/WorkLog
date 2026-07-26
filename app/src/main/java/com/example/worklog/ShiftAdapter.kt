@@ -37,6 +37,26 @@ class ShiftAdapter(
 
         val item = items[position]
 
+        val cellBackground =
+            if (position % 2 == 0) {
+                R.drawable.table_cell_border
+            } else {
+                R.drawable.table_cell_border_gray
+            }
+
+        holder.binding.tvId.setBackgroundResource(cellBackground)
+        holder.binding.tvDate.setBackgroundResource(cellBackground)
+        holder.binding.tvShift.setBackgroundResource(cellBackground)
+        holder.binding.tvHours.setBackgroundResource(cellBackground)
+
+        holder.binding.btnDelete.setBackgroundResource(
+            if (position % 2 == 0) {
+                R.drawable.delete_button_background
+            } else {
+                R.drawable.delete_button_background_gray
+            }
+        )
+
         holder.binding.tvId.text =
             (position + 1).toString()
 
