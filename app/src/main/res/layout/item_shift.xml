@@ -12,6 +12,7 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:textSize="16sp"
+        android:textColor="@android:color/black"
         android:background="@drawable/table_cell_border" />
 
     <!-- DATE -->
@@ -22,6 +23,7 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:textSize="16sp"
+        android:textColor="@android:color/black"
         android:background="@drawable/table_cell_border" />
 
     <!-- SHIFT -->
@@ -33,6 +35,7 @@
         android:layout_weight="1"
         android:gravity="center"
         android:textSize="16sp"
+        android:textColor="@android:color/black"
         android:background="@drawable/table_cell_border" />
 
     <!-- HOURS -->
@@ -43,6 +46,7 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:textSize="16sp"
+        android:textColor="@android:color/black"
         android:background="@drawable/table_cell_border" />
 
     <!-- DELETE -->
