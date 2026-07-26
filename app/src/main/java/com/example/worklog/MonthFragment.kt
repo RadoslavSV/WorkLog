@@ -216,11 +216,11 @@ class MonthFragment : Fragment() {
 
         if (differenceMinutes >= 0) {
             binding.tvDifference.setTextColor(
-                android.graphics.Color.GREEN
+                android.graphics.Color.parseColor("#00C853")
             )
         } else {
             binding.tvDifference.setTextColor(
-                android.graphics.Color.RED
+                android.graphics.Color.parseColor("#FF0000")
             )
         }
     }
