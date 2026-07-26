@@ -55,7 +55,6 @@
         android:contentDescription="Delete shift"
         android:padding="8dp"
         android:scaleType="centerInside"
-        android:background="@drawable/delete_button_background"
-        android:tint="#FF5353" />
+        android:background="@drawable/delete_button_background" />
 
 </LinearLayout>
