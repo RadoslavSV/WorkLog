@@ -118,12 +118,20 @@ class MonthFragment : Fragment() {
                                         it.breakMinutes == shift.breakMinutes
                             }
 
-                        viewLifecycleOwner.lifecycleScope.launch {
+                        androidx.appcompat.app.AlertDialog.Builder(requireContext())
+                            .setTitle("Delete Shift")
+                            .setMessage("Are you sure you want to delete this shift?")
+                            .setNegativeButton("Cancel", null)
+                            .setPositiveButton("Delete") { _, _ ->
 
-                            repository.delete(entity)
+                                viewLifecycleOwner.lifecycleScope.launch {
 
-                            loadShifts()
-                        }
+                                    repository.delete(entity)
+
+                                    loadShifts()
+                                }
+                            }
+                            .show()
                     },
 
                     onShiftClick = { shift ->
