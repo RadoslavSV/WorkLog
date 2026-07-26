@@ -47,12 +47,15 @@
 
     <!-- DELETE -->
 
-    <Button
+    <ImageButton
         android:id="@+id/btnDelete"
         android:layout_width="35dp"
         android:layout_height="match_parent"
-        android:text="—"
-        android:textSize="20sp"
-        android:background="@drawable/table_cell_border" />
+        android:src="@drawable/ic_delete"
+        android:contentDescription="Delete shift"
+        android:padding="8dp"
+        android:scaleType="centerInside"
+        android:background="@drawable/delete_button_background"
+        android:tint="#FF5353" />
 
 </LinearLayout>
