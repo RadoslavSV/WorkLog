@@ -7,6 +7,8 @@ import com.example.worklog.databinding.ItemShiftBinding
 
 class ShiftAdapter(
     private val items: List<Shift>,
+    private val month: Int,
+    private val year: Int,
     private val onDeleteClick: (Shift) -> Unit,
     private val onShiftClick: (Shift) -> Unit
 ) : RecyclerView.Adapter<ShiftAdapter.VH>() {
@@ -38,8 +40,34 @@ class ShiftAdapter(
         holder.binding.tvId.text =
             (position + 1).toString()
 
+        val calendar = java.util.Calendar.getInstance()
+
+        calendar.set(
+            year,
+            month,
+            item.date
+        )
+
+        val dayOfWeek = when (
+            calendar.get(java.util.Calendar.DAY_OF_WEEK)
+        ) {
+            java.util.Calendar.MONDAY -> "mon"
+            java.util.Calendar.TUESDAY -> "tue"
+            java.util.Calendar.WEDNESDAY -> "wed"
+            java.util.Calendar.THURSDAY -> "thu"
+            java.util.Calendar.FRIDAY -> "fri"
+            java.util.Calendar.SATURDAY -> "sat"
+            java.util.Calendar.SUNDAY -> "sun"
+            else -> ""
+        }
+
         holder.binding.tvDate.text =
-            item.date.toString()
+            String.format(
+                java.util.Locale.getDefault(),
+                "%02d%n(%s)",
+                item.date,
+                dayOfWeek
+            )
 
         holder.binding.tvShift.text =
             "${item.start} - ${item.end}"

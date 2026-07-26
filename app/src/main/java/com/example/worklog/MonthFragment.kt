@@ -107,6 +107,8 @@ class MonthFragment : Fragment() {
             binding.recyclerView.adapter =
                 ShiftAdapter(
                     shifts,
+                    monthIndex,
+                    year,
 
                     onDeleteClick = { shift ->
 
