@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <!-- ID -->
+
+    <TextView
+        android:id="@+id/tvId"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="1"
+        android:textSize="16sp"
+        android:background="@drawable/table_cell_border" />
+
+    <!-- DATE -->
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="25"
+        android:textSize="16sp"
+        android:background="@drawable/table_cell_border" />
+
+    <!-- SHIFT -->
+
+    <TextView
+        android:id="@+id/tvShift"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="7:30 - 16:00"
+        android:textSize="16sp"
+        android:background="@drawable/table_cell_border" />
+
+    <!-- HOURS -->
+
+    <TextView
+        android:id="@+id/tvHours"
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="8h 15m"
+        android:textSize="16sp"
+        android:background="@drawable/table_cell_border" />
+
+    <!-- DELETE -->
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:text="-"
+        android:textSize="20sp"
+        android:background="@drawable/table_cell_border" />
+
+</LinearLayout>

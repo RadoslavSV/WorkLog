@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvMonthTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="June 2026"
+        android:textSize="20sp"
+        android:padding="16dp"
+        android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total: 0h 0m"
+        android:padding="12dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvNeeded"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Needed: 0h 0m"
+        android:padding="12dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvDifference"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Difference: 0h 0m"
+        android:padding="12dp"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddShift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="16dp"
+        android:contentDescription="Add new shift"
+        android:src="@android:drawable/ic_input_add" />
+
+</LinearLayout>
