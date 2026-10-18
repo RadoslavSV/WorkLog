@@ -26,6 +26,28 @@ class EditShiftActivity : AppCompatActivity() {
         binding = ActivityNewShiftBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btnStartCurrentTime.setOnClickListener {
+            val currentTime = java.util.Calendar.getInstance()
+
+            binding.etStartHour.setText(
+                String.format("%02d", currentTime.get(java.util.Calendar.HOUR_OF_DAY))
+            )
+            binding.etStartMinute.setText(
+                String.format("%02d", currentTime.get(java.util.Calendar.MINUTE))
+            )
+        }
+
+        binding.btnEndCurrentTime.setOnClickListener {
+            val currentTime = java.util.Calendar.getInstance()
+
+            binding.etEndHour.setText(
+                String.format("%02d", currentTime.get(java.util.Calendar.HOUR_OF_DAY))
+            )
+            binding.etEndMinute.setText(
+                String.format("%02d", currentTime.get(java.util.Calendar.MINUTE))
+            )
+        }
+
         shiftId = intent.getIntExtra(
             "shiftId",
             -1

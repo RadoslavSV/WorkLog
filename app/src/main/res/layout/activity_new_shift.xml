@@ -44,7 +44,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
             <EditText
                 android:id="@+id/etStartHour"
@@ -71,6 +72,16 @@
                 android:maxLength="2"
                 android:padding="12dp" />
 
+            <Button
+                android:id="@+id/btnStartCurrentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current\nTime"
+                android:textSize="10sp"
+                android:minWidth="0dp"
+                android:paddingHorizontal="8dp"
+                android:layout_marginStart="8dp" />
+
         </LinearLayout>
 
         <!-- SHIFT END -->
@@ -85,7 +96,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
             <EditText
                 android:id="@+id/etEndHour"
@@ -111,6 +123,16 @@
                 android:inputType="number"
                 android:maxLength="2"
                 android:padding="12dp" />
+
+            <Button
+                android:id="@+id/btnEndCurrentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current\nTime"
+                android:textSize="10sp"
+                android:minWidth="0dp"
+                android:paddingHorizontal="8dp"
+                android:layout_marginStart="8dp" />
 
         </LinearLayout>
 
